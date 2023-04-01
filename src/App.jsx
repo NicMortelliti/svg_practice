@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import Dial from "./itt/dial/Dial";
 import GlobalStyles from "./styles/Global";
+
+// Features
+import Itt from "./itt/Itt";
 
 function App() {
   const [eicasValues, setEicasValues] = useState({
@@ -10,8 +12,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <Dial value={eicasValues.itt.left} />
-      <Dial value={eicasValues.itt.right} />
+      <Itt left={eicasValues.itt.left} right={eicasValues.itt.right} />
     </>
   );
 }

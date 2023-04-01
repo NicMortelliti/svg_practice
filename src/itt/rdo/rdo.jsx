@@ -1,7 +1,7 @@
 import React from "react";
 
-const rdo = () => {
-  return <div>rdo</div>;
+const Rdo = ({ value }) => {
+  return <div>{value}</div>;
 };
 
-export default rdo;
+export default Rdo;
