@@ -1,5 +1,6 @@
 import React from "react";
 import Ptr from "./Ptr";
+import polarToCartesian from "../../../helpers/calculators/polarToCartesian";
 
 const Scale = ({ x, y, radius, startAngle, endAngle, value, ...rest }) => {
   const start = polarToCartesian(x, y, radius, endAngle);
@@ -28,11 +29,3 @@ const Scale = ({ x, y, radius, startAngle, endAngle, value, ...rest }) => {
 };
 
 export default Scale;
-
-function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
-  const angleInRadians = ((angleInDegrees - 90) * Math.PI) / 180.0;
-  return {
-    x: centerX + radius * Math.cos(angleInRadians),
-    y: centerY + radius * Math.sin(angleInRadians),
-  };
-}
