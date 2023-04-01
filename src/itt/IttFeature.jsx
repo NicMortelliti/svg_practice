@@ -4,9 +4,9 @@ import { SingleLgDialCont } from "../styles/Containers.styled";
 import Dial from "./dial/Dial";
 import Rdo from "./rdo/rdo";
 
-const IttFeature = ({ value }) => {
+const IttFeature = ({ value, right = false }) => {
   return (
-    <SingleLgDialCont>
+    <SingleLgDialCont right={right}>
       <Dial value={value} />
       <Rdo value={value} />
     </SingleLgDialCont>

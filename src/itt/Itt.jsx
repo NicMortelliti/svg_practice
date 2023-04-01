@@ -7,7 +7,7 @@ const Itt = ({ left, right }) => {
   return (
     <DualLgDialCont>
       <IttFeature value={left} />
-      <IttFeature value={right} />
+      <IttFeature value={right} right />
     </DualLgDialCont>
   );
 };

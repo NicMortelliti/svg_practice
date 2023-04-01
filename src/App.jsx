@@ -6,7 +6,7 @@ import Itt from "./itt/Itt";
 
 function App() {
   const [eicasValues, setEicasValues] = useState({
-    itt: { left: 0, right: 20 },
+    itt: { left: 999, right: 999 },
   });
 
   return (

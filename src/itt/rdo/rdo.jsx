@@ -1,7 +1,9 @@
 import React from "react";
 
+import { LargeRdo } from "../../styles/Readouts.styled";
+
 const Rdo = ({ value }) => {
-  return <div>{value}</div>;
+  return <LargeRdo>{value}</LargeRdo>;
 };
 
 export default Rdo;
