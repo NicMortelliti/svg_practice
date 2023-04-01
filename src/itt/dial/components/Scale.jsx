@@ -6,17 +6,17 @@ const Scale = ({ x, y, radius, startAngle, endAngle, value, ...rest }) => {
   const end = polarToCartesian(x, y, radius, startAngle);
   const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
   const d = [
-    "M",
-    start.x,
-    start.y,
-    "A",
-    radius,
-    radius,
+    "M", // Move to
+    start.x, // Start stroke at
+    start.y, // Start stroke at
+    "A", // Arc
+    radius, // x-radius
+    radius, // y-radius
     0,
     largeArcFlag,
     0,
-    end.x,
-    end.y,
+    end.x, // End stroke at
+    end.y, // End stroke at
   ].join(" ");
 
   return (
