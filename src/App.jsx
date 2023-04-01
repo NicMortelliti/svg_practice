@@ -3,11 +3,14 @@ import "./App.css";
 import Dial from "./itt/dial/Dial";
 
 function App() {
-  const [leftIttValue, setLeftIttValue] = useState(0);
+  const [eicasValues, setEicasValues] = useState({
+    itt: { left: 0, right: 20 },
+  });
 
   return (
     <div className="App">
-      <Dial value={leftIttValue} />
+      <Dial value={eicasValues.itt.left} />
+      <Dial value={eicasValues.itt.right} />
     </div>
   );
 }
