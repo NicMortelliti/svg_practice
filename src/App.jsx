@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./App.css";
 import Dial from "./itt/dial/Dial";
+import GlobalStyles from "./styles/Global";
 
 function App() {
   const [eicasValues, setEicasValues] = useState({
@@ -8,10 +8,11 @@ function App() {
   });
 
   return (
-    <div className="App">
+    <>
+      <GlobalStyles />
       <Dial value={eicasValues.itt.left} />
       <Dial value={eicasValues.itt.right} />
-    </div>
+    </>
   );
 }
 
