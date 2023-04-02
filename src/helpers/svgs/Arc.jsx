@@ -16,7 +16,20 @@ const Arc = ({ start, startAngle, end, endAngle, radius }) => {
     end.y, // End stroke at
   ].join(" ");
 
-  return <path stroke="white" strokeWidth="2" d={draw} fill="none" />;
+  return (
+    <svg
+      style={{
+        border: "1px solid orange",
+        position: "absolute",
+        left: "85px",
+        top: `${end.y}px`,
+        width: `0`,
+        height: "0",
+        overflow: "visible",
+      }}>
+      <path stroke="white" strokeWidth="2" d={draw} fill="none" />
+    </svg>
+  );
 };
 
 export default Arc;

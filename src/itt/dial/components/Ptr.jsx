@@ -4,7 +4,7 @@ const Ptr = ({ x, y, radius, value }) => {
   const points = [`0,5`, `0,-5`, `${-radius},0`];
 
   return (
-    <svg style={{ border: "1px solid red" }}>
+    <svg>
       <g transform={`translate(${x}, ${y}) rotate(${value})`}>
         <circle
           cx={0}

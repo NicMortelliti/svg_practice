@@ -8,7 +8,7 @@ const Scale = ({ x, y, radius, startAngle, endAngle, value, ...rest }) => {
   const end = polarToCartesian(x, y, radius, startAngle);
 
   return (
-    <svg>
+    <>
       <Arc
         start={start}
         startAngle={startAngle}
@@ -17,7 +17,7 @@ const Scale = ({ x, y, radius, startAngle, endAngle, value, ...rest }) => {
         radius={radius}
       />
       <Ptr x={x} y={y} radius={radius} value={value} />
-    </svg>
+    </>
   );
 };
 
