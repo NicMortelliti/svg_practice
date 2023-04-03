@@ -18,7 +18,9 @@ const Scale = ({ x, y, radius, startAngle, endAngle, value }) => {
         x={x}
         y={y}
       />
-      <Ptr x={x} y={y} radius={radius} value={value} />
+      <div style={{ position: "absolute", left: `${x + radius}`, top: `${y}` }}>
+        <Ptr x={x} y={y} radius={radius} value={value} />
+      </div>
     </>
   );
 };
