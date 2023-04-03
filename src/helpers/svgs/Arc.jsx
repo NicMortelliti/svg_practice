@@ -1,6 +1,6 @@
 import React from "react";
 
-const Arc = ({ start, startAngle, end, endAngle, radius }) => {
+const Arc = ({ start, startAngle, end, endAngle, radius, x, y }) => {
   const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
   const draw = [
     "M", // Move to
@@ -21,13 +21,9 @@ const Arc = ({ start, startAngle, end, endAngle, radius }) => {
       style={{
         border: "1px solid orange",
         position: "absolute",
-        left: "85px",
-        top: `${end.y}px`,
-        width: `0`,
-        height: "0",
-        overflow: "visible",
       }}>
       <path stroke="white" strokeWidth="2" d={draw} fill="none" />
+      <circle cx={x} cy={y} r="2px" fill="red" />
     </svg>
   );
 };
