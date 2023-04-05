@@ -17,11 +17,7 @@ const Arc = ({ start, startAngle, end, endAngle, radius, x, y }) => {
   ].join(" ");
 
   return (
-    <svg
-      style={{
-        border: "1px solid orange",
-        position: "absolute",
-      }}>
+    <svg>
       <path stroke="white" strokeWidth="2" d={draw} fill="none" />
       <circle cx={x} cy={y} r="2px" fill="red" />
     </svg>

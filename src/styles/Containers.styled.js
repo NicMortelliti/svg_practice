@@ -14,3 +14,11 @@ export const SingleLgDialCont = styled(Template)`
   justify-content: end;
   align-items: ${({ right }) => (right ? "end" : "start")};
 `;
+
+export const ScaleCont = styled.div`
+  display: flex;
+
+  * {
+    /* top: 20px; */
+  }
+`;
